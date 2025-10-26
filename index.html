@@ -69,75 +69,15 @@
         itemtype="https://schema.org/WebSite"
     >
 
-    <!-- Cookie Banner -->
-    <div id="cookie-consent-banner" style="
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #222;
-        color: #fff;
-        padding: 15px;
-        text-align: center;
-        z-index: 1000;
-        font-family: sans-serif;
-    ">
-        This website uses analytics cookies to improve your experience. 
-        <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;">Accept</button>
-        <button id="decline-cookies" style="margin-left:5px;padding:5px 10px;">Decline</button>
-        <a href="/privacy-policy" style="color: #ddd; margin-left:10px;">Privacy Policy</a>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Buttons
-            var acceptBtn = document.getElementById('accept-cookies');
-            var declineBtn = document.getElementById('decline-cookies');
-
-            if (!acceptBtn || !declineBtn) return; // Safety check
-
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('gaConsent', 'true');
-                loadGoogleAnalytics();
-                document.getElementById('cookie-consent-banner').style.display = 'none';
-            });
-
-            declineBtn.addEventListener('click', function() {
-                localStorage.setItem('gaConsent', 'false');
-                document.getElementById('cookie-consent-banner').style.display = 'none';
-            });
-
-            // Load GA if already accepted
-            if (localStorage.getItem('gaConsent') === 'true') {
-                loadGoogleAnalytics();
-                document.getElementById('cookie-consent-banner').style.display = 'none';
-            }
-
-            // Function to load Google Analytics
-            function loadGoogleAnalytics() {
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-ZLED06YMLY', { 'anonymize_ip': true });
-
-                var gaScript = document.createElement('script');
-                gaScript.async = true;
-                gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY';
-                document.head.appendChild(gaScript);
-            }
-        });
-    </script>
-
         <div class="jw-background">
         </div>
   
 <!---->
-
         <div class="jw-body">
             <div class="jw-mobile-menu jw-mobile-is-logo js-mobile-menu">
-            <span 
-                class="jw-mobile-menu__button jw-mobile-menu__button--dummy">
-            </span>        
+                <span 
+                    class="jw-mobile-menu__button jw-mobile-menu__button--dummy">
+                </span>        
                 <div class="jw-mobile-header jw-mobile-header--image">
                     <span class="jw-mobile-header-content">
                         <img 
@@ -413,7 +353,8 @@
                             style="background-position: 50% 50%; background-image: url('images/Dancing_Top.jpeg?enable-io=true&enable=upscale&crop=1920,960,x0,y960,safe&width=1020&height=510');" 
                             data-background-position-x="0.5" 
                             data-background-position-y="0.5" 
-                            class="jw-slideshow-slide-content jw-slideshow-slide-content--display-cover jw-slideshow-slide-content--backdrop jw-slideshow-slide-content--captions">                            
+                            class="jw-slideshow-slide-content jw-slideshow-slide-content--display-cover jw-slideshow-slide-content--backdrop jw-slideshow-slide-content--captions"
+                        >                            
                             <div class="jw-slideshow-slide-backdrop">
                             </div>
                             <div 
@@ -1500,7 +1441,7 @@
                                         <div id="jw-credits-tool">
                                         <!---->
                                             <small>
-                                                (index.html Version 0.76 Beta + Google Stats & PP)
+                                                (index.html Version 0.8 Beta + Google Stats & Consent)
                                             </small>
                                         </div>
                                     </div>
@@ -1545,9 +1486,32 @@
         <script nonce="319645c417f61a82ff287ae7b97ff0ce" type="application/ld+json">[{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/temp-yxpwzzgykbposdhhhqqs.webadorsite.com\/","name":"Paphos Jivers","logo":{"@type":"ImageObject","url":"https:\/\/primary.jwwb.nl\/public\/z\/i\/c\/temp-yxpwzzgykbposdhhhqqs\/image-high.png?enable-io=true&enable=upscale&height=60","width":270,"height":60}}]</script>
         -->
         <script nonce="319645c417f61a82ff287ae7b97ff0ce">window.JOUWWEB = window.JOUWWEB || {}; window.JOUWWEB.experiment = {"enrollments":{},"defaults":{"only-annual-discount-restart":"3months-50pct","ai-page-wizard":"on","page-structure-selector":"on","ai-homepage-structures":"on","grid-element":"on","trustpilot-signup":"none","mailbox-adoption":"on","invoice-email-text":"b"}};</script>        
-        <script nonce="319645c417f61a82ff287ae7b97ff0ce">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };</script>                                
+        <script nonce="319645c417f61a82ff287ae7b97ff0ce">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };</script>
 
-        <!-- Cookie Banner -->
+        <div class="jw-background">
+        </div>
+        <div class="jw-body">
+            <div class="jw-mobile-menu jw-mobile-is-logo js-mobile-menu">
+                <span 
+                    class="jw-mobile-menu__button jw-mobile-menu__button--dummy">
+                </span>        
+                <div class="jw-mobile-header jw-mobile-header--image">
+                    <span class="jw-mobile-header-content">
+                        <img 
+                            class="jw-mobile-logo jw-mobile-logo--landscape" 
+                            src="images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=70" 
+                            srcset="images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=70 1x, 
+                                    images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=140&quality=70 2x" 
+                            alt="Paphos Jivers" 
+                            title="Paphos Jivers"
+                        >
+                    </span>
+                </div>   
+            </div>   
+        </div>  
+        
+<!-- Cookie Banner -->
+
         <div id="cookie-consent-banner" style="
             position: fixed;
             bottom: 0;
@@ -1567,68 +1531,68 @@
         </div>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Buttons
-                var acceptBtn = document.getElementById('accept-cookies');
-                var declineBtn = document.getElementById('decline-cookies');
+        document.addEventListener('DOMContentLoaded', function() {
+            const banner = document.getElementById('cookie-consent-banner');
+            const acceptBtn = document.getElementById('accept-cookies');
+            const declineBtn = document.getElementById('decline-cookies');
 
-                if (!acceptBtn || !declineBtn) return; // Safety check
+            // Safety check
+            if (!banner || !acceptBtn || !declineBtn) return;
 
-                acceptBtn.addEventListener('click', function() {
-                    localStorage.setItem('gaConsent', 'true');
-                    loadGoogleAnalytics();
-                    document.getElementById('cookie-consent-banner').style.display = 'none';
-                });
+            // Check stored consent
+            const consent = localStorage.getItem('gaConsent');
+            if (consent === 'true') {
+                loadGoogleAnalytics();
+                banner.style.display = 'none';
+            } else if (consent === 'false') {
+                banner.style.display = 'none';
+            }
 
-                declineBtn.addEventListener('click', function() {
-                    localStorage.setItem('gaConsent', 'false');
-                    document.getElementById('cookie-consent-banner').style.display = 'none';
-                });
-
-                // Load GA if already accepted
-                if (localStorage.getItem('gaConsent') === 'true') {
-                    loadGoogleAnalytics();
-                    document.getElementById('cookie-consent-banner').style.display = 'none';
-                }
-
-                // Function to load Google Analytics
-                function loadGoogleAnalytics() {
-                    var gaScript = document.createElement('script');
-                    gaScript.async = true;
-                    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY';
-                    document.head.appendChild(gaScript);
-
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    window.gtag = gtag;
-                    gtag('js', new Date());
-                    gtag('config', 'G-ZLED06YMLY', { 'anonymize_ip': true });
-                }
+            // Accept button
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('gaConsent', 'true');
+                loadGoogleAnalytics();
+                banner.style.display = 'none';
             });
+
+            // Decline button
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem('gaConsent', 'false');
+                banner.style.display = 'none';
+            });
+
+            function loadGoogleAnalytics() {
+                if (window.gtagLoaded) return; // Prevent double-loading
+                window.gtagLoaded = true;
+
+                const gaScript = document.createElement('script');
+                gaScript.async = true;
+                gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY';
+                document.head.appendChild(gaScript);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-ZLED06YMLY', { 'anonymize_ip': true });
+            }
+        });
         </script>
 
-        <div class="jw-background">
-        </div>
-  
-<!---->
+        <!-- What happens if you decline cookies? (ChatGPT)
 
-        <div class="jw-body">
-            <div class="jw-mobile-menu jw-mobile-is-logo js-mobile-menu">
-            <span 
-                class="jw-mobile-menu__button jw-mobile-menu__button--dummy">
-            </span>        
-                <div class="jw-mobile-header jw-mobile-header--image">
-                    <span class="jw-mobile-header-content">
-                        <img 
-                            class="jw-mobile-logo jw-mobile-logo--landscape" 
-                            src="images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=70" 
-                            srcset="images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=70 1x, 
-                                    images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=140&quality=70 2x" 
-                            alt="Paphos Jivers" 
-                            title="Paphos Jivers"
-                        >
-                    </span>
-                </div>   
-    
+        Here’s exactly what happens in your current code when someone clicks Decline:
+        The banner hides (banner.style.display = 'none').
+        The code stores a value in their browser’s localStorage:
+        localStorage.setItem('gaConsent', 'false');
+        This tells your site “user has declined cookies.”
+        Because of that, the loadGoogleAnalytics() function is never called, so:
+        No Google Analytics script is loaded.
+        No tracking cookies are created.
+        No data is sent to Google.
+        That means you’re fully compliant — you’re respecting the user’s decision.
+
+        -->        
+
     </body>
 </html>
