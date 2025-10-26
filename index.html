@@ -56,62 +56,7 @@
         <link rel="preconnect" href="https://assets.jwwb.nl">
         <link rel="stylesheet" type="text/css" href="https://primary.jwwb.nl/public/z/i/c/temp-yxpwzzgykbposdhhhqqs/style.css">    
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZLED06YMLY');
-        </script>
-
-        <!-- Cookies Banner -->
-         <div id="cookie-consent-banner" style="
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #222;
-            color: #fff;
-            padding: 15px;
-            text-align: center;
-            z-index: 1000;
-            font-family: sans-serif;
-        ">
-            This website uses analytics cookies to improve your experience. 
-            <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;">Accept</button>
-            <button id="decline-cookies" style="margin-left:5px;padding:5px 10px;">Decline</button>
-            <a href="/privacy-policy" style="color: #ddd; margin-left:10px;">Privacy Policy</a>
-        </div>
-
-        <script>
-            (function() {
-                // Function to load Google Analytics
-                function loadGoogleAnalytics() {
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', 'G-ZLED06YMLY', { 'anonymize_ip': true });
-                    
-                    var gaScript = document.createElement('script');
-                    gaScript.async = true;
-                    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY';
-                    document.head.appendChild(gaScript);
-                }
-
-                // Check if the user has already given consent
-                var gaConsent = localStorage.getItem('gaConsent');
-
-                if (gaConsent === 'true') {
-                    loadGoogleAnalytics();
-                }
-
-                // Optional: if you want to show the banner again on pages without it
-                // you can include your banner HTML and event listeners here
-            })();
-        </script>
-
-        </head>
+    </head>
     <body
         id="top"
         class="jw-is-slideshow jw-header-is-image jw-is-segment-page jw-is-frontend jw-is-no-sidebar jw-is-no-messagebar jw-is-no-touch-device jw-is-no-mobile"
@@ -123,6 +68,66 @@
         itemscope
         itemtype="https://schema.org/WebSite"
     >
+
+    <!-- Cookie Banner -->
+    <div id="cookie-consent-banner" style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #222;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+        z-index: 1000;
+        font-family: sans-serif;
+    ">
+        This website uses analytics cookies to improve your experience. 
+        <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;">Accept</button>
+        <button id="decline-cookies" style="margin-left:5px;padding:5px 10px;">Decline</button>
+        <a href="/privacy-policy" style="color: #ddd; margin-left:10px;">Privacy Policy</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Buttons
+            var acceptBtn = document.getElementById('accept-cookies');
+            var declineBtn = document.getElementById('decline-cookies');
+
+            if (!acceptBtn || !declineBtn) return; // Safety check
+
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('gaConsent', 'true');
+                loadGoogleAnalytics();
+                document.getElementById('cookie-consent-banner').style.display = 'none';
+            });
+
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem('gaConsent', 'false');
+                document.getElementById('cookie-consent-banner').style.display = 'none';
+            });
+
+            // Load GA if already accepted
+            if (localStorage.getItem('gaConsent') === 'true') {
+                loadGoogleAnalytics();
+                document.getElementById('cookie-consent-banner').style.display = 'none';
+            }
+
+            // Function to load Google Analytics
+            function loadGoogleAnalytics() {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-ZLED06YMLY', { 'anonymize_ip': true });
+
+                var gaScript = document.createElement('script');
+                gaScript.async = true;
+                gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY';
+                document.head.appendChild(gaScript);
+            }
+        });
+    </script>
+
         <div class="jw-background">
         </div>
   
@@ -271,7 +276,20 @@
                                             Directions        
                                         </span>
                                     </a>
-                                </li>    
+                                </li>  
+                                <li
+                                    class="jw-menu-item"
+                                >
+                                    <a        
+                                        class="jw-menu-link"
+                                        href="./test"                                            
+                                        data-page-link-id="29525975"
+                                    >
+                                        <span class="">
+                                            Test        
+                                        </span>
+                                    </a>
+                                </li>     
                             </ul>
 
                             <script nonce="319645c417f61a82ff287ae7b97ff0ce" id="jw-mobile-menu-template" type="text/template">
@@ -351,6 +369,19 @@
                                         >
                                             <span class="">
                                                 Directions       
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="jw-menu-item"
+                                    >
+                                        <a        
+                                            class="jw-menu-link"
+                                            href="./test"                                            
+                                            data-page-link-id="29525975"
+                                        >
+                                            <span class="">
+                                                Test       
                                             </span>
                                         </a>
                                     </li>
@@ -1469,7 +1500,7 @@
                                         <div id="jw-credits-tool">
                                         <!---->
                                             <small>
-                                                (index.html Version 0.74 Beta + Google Stats & PP)
+                                                (index.html Version 0.76 Beta + Google Stats & PP)
                                             </small>
                                         </div>
                                     </div>
@@ -1515,5 +1546,89 @@
         -->
         <script nonce="319645c417f61a82ff287ae7b97ff0ce">window.JOUWWEB = window.JOUWWEB || {}; window.JOUWWEB.experiment = {"enrollments":{},"defaults":{"only-annual-discount-restart":"3months-50pct","ai-page-wizard":"on","page-structure-selector":"on","ai-homepage-structures":"on","grid-element":"on","trustpilot-signup":"none","mailbox-adoption":"on","invoice-email-text":"b"}};</script>        
         <script nonce="319645c417f61a82ff287ae7b97ff0ce">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };</script>                                
+
+        <!-- Cookie Banner -->
+        <div id="cookie-consent-banner" style="
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #222;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+            font-family: sans-serif;
+        ">
+            This website uses analytics cookies to improve your experience. 
+            <button id="accept-cookies" style="margin-left:10px;padding:5px 10px;">Accept</button>
+            <button id="decline-cookies" style="margin-left:5px;padding:5px 10px;">Decline</button>
+            <a href="/privacy-policy" style="color: #ddd; margin-left:10px;">Privacy Policy</a>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Buttons
+                var acceptBtn = document.getElementById('accept-cookies');
+                var declineBtn = document.getElementById('decline-cookies');
+
+                if (!acceptBtn || !declineBtn) return; // Safety check
+
+                acceptBtn.addEventListener('click', function() {
+                    localStorage.setItem('gaConsent', 'true');
+                    loadGoogleAnalytics();
+                    document.getElementById('cookie-consent-banner').style.display = 'none';
+                });
+
+                declineBtn.addEventListener('click', function() {
+                    localStorage.setItem('gaConsent', 'false');
+                    document.getElementById('cookie-consent-banner').style.display = 'none';
+                });
+
+                // Load GA if already accepted
+                if (localStorage.getItem('gaConsent') === 'true') {
+                    loadGoogleAnalytics();
+                    document.getElementById('cookie-consent-banner').style.display = 'none';
+                }
+
+                // Function to load Google Analytics
+                function loadGoogleAnalytics() {
+                    var gaScript = document.createElement('script');
+                    gaScript.async = true;
+                    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZLED06YMLY';
+                    document.head.appendChild(gaScript);
+
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    window.gtag = gtag;
+                    gtag('js', new Date());
+                    gtag('config', 'G-ZLED06YMLY', { 'anonymize_ip': true });
+                }
+            });
+        </script>
+
+        <div class="jw-background">
+        </div>
+  
+<!---->
+
+        <div class="jw-body">
+            <div class="jw-mobile-menu jw-mobile-is-logo js-mobile-menu">
+            <span 
+                class="jw-mobile-menu__button jw-mobile-menu__button--dummy">
+            </span>        
+                <div class="jw-mobile-header jw-mobile-header--image">
+                    <span class="jw-mobile-header-content">
+                        <img 
+                            class="jw-mobile-logo jw-mobile-logo--landscape" 
+                            src="images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=70" 
+                            srcset="images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=70 1x, 
+                                    images/Paphos-Jivers_logo.jpg?enable-io=true&enable=upscale&height=140&quality=70 2x" 
+                            alt="Paphos Jivers" 
+                            title="Paphos Jivers"
+                        >
+                    </span>
+                </div>   
+    
     </body>
 </html>
