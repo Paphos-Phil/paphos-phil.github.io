@@ -5,6 +5,7 @@ Modification History
 2025-09 Working on the Cookies disclaimer - test page has been added
 
 Paphos-Jivers.com
+=================
 
 Hi, we are a small (40'odd) dance group in Paphos, Cyprus, set up to promote a style of partnered dancing called Modern Jive.  We meet every Tuesday in September through to June, in Chloraka in Paphos.  If you have an interest in partnered dancing (its like Salsa, but Modern Jive is simpler) then please join us, we run a Beginners lesson at 7pm every Tuesday.
 
