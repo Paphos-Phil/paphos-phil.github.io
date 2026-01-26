@@ -33,4 +33,3 @@ The text is a bit small for phones, I haven’t worked out how to make the defau
 The menu options at the top only take you to places on the page, not other pages (except for directions)
 I have found some more very old pictures, we need to take some new ones when we restart
 Is there anything else we can add to the site?  I only foresee using it as a reference for people who are thinking of joining us, and not as a newsletter (WhatsApp), so the pages will be very static.
-The Banner saying we are closed will be changed on the 2nd September
