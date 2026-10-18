@@ -30,6 +30,51 @@
             gtag('config', 'G-ZLED06YMLY');
         </script>
 
+        <!-- Responsive header logos; keep desktop styling unchanged. -->
+        <style id="paphos-responsive-header-logos">
+            @media screen and (max-width: 1020px) {
+                .topmenu .jw-header-logo {
+                    min-width: 0;
+                    max-width: 100%;
+                }
+
+                #jw-header-image-container {
+                    flex-basis: auto !important;
+                    width: 100%;
+                    max-width: 573px !important;
+                    min-width: 0;
+                }
+
+                #jw-header-image {
+                    display: block;
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .jw-mobile-menu .jw-mobile-header {
+                    flex: 1 1 0%;
+                    min-width: 0;
+                    max-width: 100%;
+                }
+
+                .jw-mobile-menu .jw-mobile-header-content {
+                    display: block;
+                    min-width: 0;
+                    max-width: 100%;
+                }
+
+                .jw-mobile-menu img.jw-mobile-logo {
+                    display: block;
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+
     </head>
 <!---->
         <body
